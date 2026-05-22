@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --color-cream: #FDFBF7;
+  --color-warm-white: #F9F7F2;
+  --color-sand: #D9C5B2;
+  --color-terracotta: #606C38;
+  --color-terracotta-light: #A5A58D;
+  --color-sage: #997B66;
+  --color-mustard: #BB9457;
+  --color-plum: #432818;
+  --color-ink: #1B1510;
+  --color-ink-mid: #3E362E;
+  --color-ink-soft: #7C7165;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-body;
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+.animate-scroll-pulse {
+  animation: scrollPulse 2s infinite;
+}
+
+.custom-pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-8px);
+}
+
+.pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2.5px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.pin-label {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.92);
+  padding: 4px 8px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  color: #2A2218;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+}
